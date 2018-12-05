@@ -21,7 +21,6 @@ This repository contains all data and scripts required for running the interacti
 - [denis-cohen.github.io](https://denis-cohen.github.io)
 - [\@denis_cohen](https://twitter.com/denis_cohen)
 - +49 621 181 2876
-<br>
 
 ##### Julian Bernauer
 
