@@ -47,8 +47,11 @@ library(roxygen2)
 
 ## Setup
 ##### Today
-- For today's class, our slides will feature interactive exercises which
+- For today's class, our slides will feature interactive exercises, which
 we will collectively discuss and solve
+- You may follow along at 
+[https://shinyapps.io/denis-cohen/rintro/](https://shinyapps.io/denis-cohen/rintro/)
+(available for the duration of the class)
 
 ##### Using the class materials at a later point
 - Install the most recent version of [R](https://cran.r-project.org/mirrors.html)
@@ -816,7 +819,7 @@ cat_function <- function(love=TRUE){
 ```
 
 ## Documentation and Installation
-We change the working directory to the function directory...
+We change the working directory to the package directory...
 ```{r changewd, eval=FALSE}
 setwd("babelfish")
 ```
@@ -826,7 +829,7 @@ setwd("babelfish")
 document()
 ```
 
-...move back up to the parent directory and install the function:
+...move back up to the parent directory and install the package:
 ```{r install, eval=FALSE}
 setwd("..")
 install("babelfish")
