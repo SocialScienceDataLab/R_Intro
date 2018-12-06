@@ -122,10 +122,10 @@ y <- 4L    # an integer
 sapply(list(x, y), typeof)
 ```
 
-While both are of different storage *types*, they are of the same *class*:
+While both are of different storage types, they are both numeric:
 
 ```{r num_4, exercise = TRUE, exercise.lines = 1}
-sapply(list(x, y), class)
+sapply(list(x, y), is.numeric)
 ```
 
 ## Artihmetic Operators and Common Transformations
@@ -230,27 +230,27 @@ pricey
 - A length-$N$ numeric vector in R is usually a column vector. So 
 the following is *mostly* of dimensions $3 \times 1$
 ```{r vec2_1}
-a <- c(0, 1, 2)
+d <- c(0, 1, 2)
 ```
 - Yet sometimes, when (pre-)multiplying other vectors or matrices, R will 
 automatically transpose the vector on the left to ensure conformability:
 ```{r vec2_2, include=TRUE, eval=TRUE}
-a %*% a
+d %*% d
 ```
 
-- So the above yields the inner product $\mathbf{a}^{\prime} \mathbf{a}$,
-a scalar (dimensions $1 \times 1$) and *not* the outer product $\mathbf{a}\mathbf{a}^{\prime}$,
-a matrix of dimensions $5 \times 5$
+- So the above yields the inner product $\mathbf{d}^{\prime} \mathbf{d}$,
+a scalar (dimensions $1 \times 1$) and *not* the outer product $\mathbf{d}\mathbf{d}^{\prime}$,
+a matrix of dimensions $3 \times 3$
 
 ## Row and Column Vectors as Matrices
 - You can ensure unambigous dimensions by defining vectors as matrices
 
 ```{r vec3_1, exercise=TRUE}
-as.matrix(a)
+as.matrix(d)
 ```
 ```{r vec3_2, exercise=TRUE}
 ## Note: t() transposes vectors and matrices
-as.matrix(t(a))
+as.matrix(t(d))
 ```
 
 ## Matrices
@@ -351,6 +351,9 @@ groceries <- data.frame(
   item = c("flour", "sugar", "potatoes", "tomatoes", "bananas"),
   price = c(.99, 1.49, 1.99, 2.79, 1.89)
 )
+```
+
+```{r df2, exercise = TRUE}
 groceries
 sapply(groceries, class) # change function argument to "typeof"
 ```
